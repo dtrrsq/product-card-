@@ -1,0 +1,139 @@
+* {
+  font-family: Montserrat;
+  box-sizing: border-box;
+}
+
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  left: 85px;
+  width: 1110px;
+  height: 1191px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.product-card-container__title {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 78px;
+  margin-top: 220px auto;
+  margin: 220px auto 125px auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #515076;
+}
+
+.product-card {
+  width: 340px;
+  height: 573px;
+  border: 2px solid white;
+  background-color: #F7F7FA;
+  padding: 20px 20px 20px 20px
+}
+
+.product-card__image {
+  width: 290px;
+  height: 245px;
+}
+
+.product-card__bg-dandelions {
+  position: absolute;
+  width: 790px;
+  height: 697px;
+  left: 85px;
+  top: 0px;
+  background: url(bg.png);
+}
+
+.product-card__for-skin {
+  width: 171px;
+  height: 24px;
+  left: 110px;
+  top: 708px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #A5A3B9;
+}
+
+.product-card__title {
+  width: 255px;
+  height: 27px;
+  left: 687px;
+  top: 1355px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #515076;
+}
+
+.product-card__descr {
+  width: 287px;
+  height: 36px;
+  left: 110px;
+  top: 769px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.product-card__composition {
+  width: 49px;
+  height: 18px;
+  left: 110px;
+  top: 820px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+  background-size: 790px 697px;
+}
+
+.product-card__item {
+  width: 237px;
+  height: 18px;
+  left: 125px;
+  top: 843px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.product-card__price-container {
+  width: 290px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__price-text {
+  width: 56px;
+  height: 24px;
+  left: 110px;
+  top: 932px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
+}
+
+.product-card__price {
+  width: 73px;
+  height: 24px;
+  left: 327px;
+  top: 932px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
+}
