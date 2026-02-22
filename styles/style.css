@@ -137,3 +137,8 @@
   line-height: 24px;
   color: #515076;
 }
+
+.buttons {
+  position: fixed;
+  top: 0;
+}
