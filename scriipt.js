@@ -39,19 +39,8 @@ produtCardTitle.addEventListener('mouseover', function () {
 
 // переключатель цвета кнопки
 const colorTogglerButton = document.querySelector('#color-toggler-button');
-const pinkHashColor = '#ff00e1';
-const yellowHashColor = '#fff700';
-let step = 0;
 
 colorTogglerButton.addEventListener('click', () => {
-  step++;
-  colorTogglerButton.classList.toggle('submit');
-  
-  if (step === 1) {
-    colorTogglerButton.style.backgroundColor = pinkHashColor;
-  } else {
-    colorTogglerButton.style.backgroundColor = yellowHashColor;
-    step = 0;
-  }
+ colorTogglerButton.classList.toggle('is-yellow');
 });
 

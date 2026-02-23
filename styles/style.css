@@ -142,3 +142,11 @@
   position: fixed;
   top: 0;
 }
+
+#color-toggler-button {
+  background-color: pink;
+}
+
+#color-toggler-button.is-yellow {
+  background-color: yellow;
+}
