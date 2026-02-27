@@ -6,44 +6,44 @@ showWeather("Москве", 10);
 
 // N.4 Создать переменную, которая хранит внутри себя скорость света (гуглим). Создать функцию, которая принимает 1 аргумент - скорость, внутри функции происходит проверка: если переданная скорость выше скорости света — выводим лог "Сверхсветовая скорость", если ниже — "Субсветовая  скорость"? если равна — "Скорость света"
 const SPEED_LIGHT = 299792458;
-function checkSpeed(speed) {
+function compareSpeed(speed) {
   if (speed > 299792458) {
-    console.log('Сверхсветовая скорость');
+    console.log("Сверхсветовая скорость");
   } else if (speed === 299792458) {
-    console.log('Cветовая скорость');
+    console.log("Cветовая скорость");
   } else {
-    console.log('Субсветовая скорость');
+    console.log("Субсветовая скорость");
   }
 }
-checkSpeed(500000000);
-checkSpeed(299792458);
-checkSpeed(350);
+compareSpeed(500000000);
+compareSpeed(299792458);
+compareSpeed(350);
 
 // N.5 Создать переменную №1, которая содержит продукт и переменную №2, которая содержит его цену (на ваше усмотрение). Далее создаем функцию, которая принимает 1 параметр - текущий бюджет, внутри функции происходит проверка: если бюджет превышает цену товара - выводим лог "(ваше название товара) приобретён. Спасибо за покупку!", если нет - обсчитываем разницу и выводим лог "Вам не хватает X$, пополните баланс".  То-есть с помощью функции мы пытаемся приобрести товар.
-const productBook = 'книга';
+const productBook = "книга";
 const price = 500;
-function purchase(budget) {
+function buyProduct(budget) {
   if (budget >= price) {
     console.log(`${productBook} приобритена.Спасибо за покупку!`);
   } else {
-    let costed = price - budget;
-    console.log(`Вам не хватает ${costed}, пополните баланс`);
+    let cost = price - budget;
+    console.log(`Вам не хватает ${cost}, пополните баланс`);
   }
 }
-purchase(510);
-purchase(500);
-purchase(350);
+buyProduct(510);
+buyProduct(500);
+buyProduct(350);
 
 // N.6 Создать 1 функцию и именовать её по своему усмотрению
 function showMyPhone(phone) {
   console.log(`мне нравится мой ${phone}, он хорошо работает уже 2 года`);
 }
-showMyPhone('Samsung S24');
+showMyPhone("Samsung S24");
 
 // N.7 Создать 3 переменных (без разницы каких) и именовать их по своему усмотрению
-const weekends = 'Суббота и Воскресенье';
+const weekends = "Суббота и Воскресенье";
 let tips = 433;
 let zero = 0;
-console.log(weekends)
-console.log(tips)
-console.log(zero)
+console.log(weekends);
+console.log(tips);
+console.log(zero);
