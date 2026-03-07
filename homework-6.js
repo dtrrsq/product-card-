@@ -32,13 +32,13 @@ addMaxSpeed(car);
 console.log(car);
 
 // N.6 Написать функцию, которая получает первым аргументом  — объект, а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
-function showProperty(mainObject, keyName) {
+function showObjectProperty(mainObject, keyName) {
   console.log(mainObject[keyName]);
 }
-showProperty(car, "brand");
+showObjectProperty(car, "brand");
 
 // N.7 Создать массив, который содержит названия продуктов (просто строки)
-const Products = ["bread", "apples", "bananas", "eggs"];
+const products = ["bread", "apples", "bananas", "eggs"];
 
 // N.8 Создать массив из объектов в котором объект представляет собой книгу. после добавить еще одну книгу в конце списка
 const fictions = [
@@ -96,13 +96,18 @@ const potterUniverse = [
     genre: "Fantasy",
   },
 ];
-console.log(...fictions, ...potterUniverse);
+const addedBooks = potterUniverse;
+console.log(...fictions, ...addedBooks);
 
 // N.10 Написать функцию, которая принимает массив сущностей с задания №9.  если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий).
-const checkRarity = (booksArray) =>
-  booksArray.map((book) => ({
-    ...book,
-    isRare: book.year > 2000,
-  }));
-const updatedPotterUniverse = checkRarity(potterUniverse);
+const getRarity = (booksArray) => {
+  return booksArray.map((book) => {
+    return {
+      ...book,
+      isRare: book.year > 2000,
+    };
+  });
+};
+
+const updatedPotterUniverse = getRarity(potterUniverse);
 console.log(updatedPotterUniverse);
