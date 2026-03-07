@@ -73,7 +73,7 @@ fictions.push({
 });
 
 // N.9 создать еще один массив и объединить его с прошлым
-const potterUniverse = [
+const fictionsPotterUniverseBooks = [
   {
     title: "Гарри Поттер и Тайная комната",
     author: "Дж. К. Роулинг",
@@ -96,11 +96,11 @@ const potterUniverse = [
     genre: "Fantasy",
   },
 ];
-const addedBooks = [...fictions, ...potterUniverse];
-console.log(addedBooks);
+const allBooks = [...fictions, ...fictionsPotterUniverseBooks];
+console.log(allBooks);
 
 // N.10 Написать функцию, которая принимает массив сущностей с задания №9.  если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий).
-const getRarity = (booksArray) => {
+const getRarityBooks = (booksArray) => {
   return booksArray.map((book) => {
     return {
       ...book,
@@ -109,5 +109,5 @@ const getRarity = (booksArray) => {
   });
 };
 
-const updatedPotterUniverse = getRarity(potterUniverse);
+const updatedPotterUniverse = getRarityBooks(fictionsPotterUniverseBooks);
 console.log(updatedPotterUniverse);
