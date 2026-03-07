@@ -96,8 +96,8 @@ const potterUniverse = [
     genre: "Fantasy",
   },
 ];
-const addedBooks = potterUniverse;
-console.log(...fictions, ...addedBooks);
+const addedBooks = [...fictions, ...potterUniverse];
+console.log(addedBooks);
 
 // N.10 Написать функцию, которая принимает массив сущностей с задания №9.  если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий).
 const getRarity = (booksArray) => {
