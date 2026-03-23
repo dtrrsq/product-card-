@@ -9,9 +9,9 @@ console.log(newArray);
 
 // 3. Создать массив строк, проверить, есть ли в массиве какая-то определенная сущность
 const furnitures = ["chair", "sofa", "table", "closet"];
-const checkFurniture = furnitures.includes("sofa");
+const hasFurniture = furnitures.includes("sofa");
 
-console.log(checkFurniture);
+console.log(hasFurniture);
 
 // 4. Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный
 function reverseArray(array) {
@@ -27,33 +27,33 @@ const filteredComments = commentsSocialMedia.filter((comment) =>
 );
 
 // 8. Перебрать массив
-const sorteredIds = commentsSocialMedia.map((comment) => ({
+const updatedComments = commentsSocialMedia.map((comment) => ({
   ...comment,
   postid: comment.di <= 5 ? 2 : 1,
 }));
-console.log(sorteredIds);
+console.log(updatedComments);
 
 // 9. Оставить в объектах  только id и name
-const sortedComments = commentsSocialMedia.map((comment) => ({
+const shortComments = commentsSocialMedia.map((comment) => ({
   id: comment.id,
   name: comment.name,
 }));
-console.log(sortedComments);
+console.log(shortComments);
 
 // 10. Перебираем массив, добавляем объектам свойство isInvalid
-const processedComments = commentsSocialMedia.map((comment) => ({
+const validatedComments = commentsSocialMedia.map((comment) => ({
   ...comment,
   isInvalid: comment.body.length >= 180 ? true : false,
 }));
-console.log(processedComments);
+console.log(validatedComments);
 
 /* Уровень 3 
  11. вывести массив почт с помощью reduce и map*/
-const getEmails = commentsSocialMedia.reduce((acc, item) => {
+const emailsByReduce = commentsSocialMedia.reduce((acc, item) => {
   acc.push(item.email);
   return acc;
 }, []);
-console.log(getEmails);
+console.log(emailsByReduce);
 
 const emailsByMap = commentsSocialMedia.map((comment) => comment.email);
 console.log(emailsByMap);
