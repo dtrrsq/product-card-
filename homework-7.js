@@ -29,7 +29,7 @@ const filteredComments = commentsSocialMedia.filter((comment) =>
 // 8. Перебрать массив
 const updatedComments = commentsSocialMedia.map((comment) => ({
   ...comment,
-  postid: comment.di <= 5 ? 2 : 1,
+  postid: comment.id <= 5 ? 2 : 1,
 }));
 console.log(updatedComments);
 
@@ -59,5 +59,5 @@ const emailsByMap = commentsSocialMedia.map((comment) => comment.email);
 console.log(emailsByMap);
 
 // 12. перебрав массив с задания 11, привести его к строке.
-const emailString = getEmails.toString();
-const emailStringByJoin = getEmails.join(", ");
+const emailString = emailsByReduce.toString();
+const emailStringByJoin = emailsByReduce.join(", ");

@@ -15,31 +15,32 @@
 <body>
   <div class="product-card-container">
     <h1 class="product-card-container__title">Выбери свой продукт</h1>
+    <img src="images/bg-dandelions.png" alt="одуванчики" class="product-card__bg-dandelions">
     <div class="buttons">
       <button id="recolor-first-card-button">перекрасить первую карточку</button>
       <button id="recolor-all-cards-button">перекрасить все карточки</button>
       <button id="open-google-button">переход на страницу Google</button>
       <button id="color-toggler-button">переключатель цвета</button>
     </div>
-    <div class="product-card">
-      <img src="/images/moisturizing-mousse.png" alt="улажняющий мусс" class="product-card__image">
-      <img src="images/bg-dandelions.png" alt="одуванчики" class="product-card__bg-dandelions">
-      <P class="product-card__for-skin">для нормальной кожи</P>
-      <h3 class="product-card__title">Увлажняющий мусс</h3>
-      <p class="product-card__descr">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
-      <span class="product-card__composition">Состав:</span>
-      <ul>
-        <li class="product-card__item" type="circle">активные натуральные комплексы</li>
-        <li class="product-card__item" type="circle">витамины С, А, РР, В И Е</li>
-        <li class="product-card__item" type="circle">солнцезащитные компоненты</li>
-      </ul>
-      <div class="product-card__price-container">
-        <span class="product-card__price-text"> Цена</span>
-        <span class="product-card__price">2750 &#8381</span>
-      </div>
-    </div>
+    <ul id="products-list"></ul>
+    <template id="product-card-template">
+      <li class="product-card">
+        <img class="product-card__image">
+        <P class="product-card__for-skin"></P>
+        <h3 class="product-card__title"></h3>
+        <p class="product-card__descr"></p>
+        <span class="product-card__composition">Состав:</span>
+        <ul class="product-card__comp-list">
+          <li class="product-card__item" type="circle"></li>
+        </ul>
+        <div class="product-card__price-container">
+          <span class="product-card__price-text">Цена</span>
+          <span class="product-card__price"></span>
+        </div>
+      </li>
+    </template>
 
-    <div class="product-card">
+    <!-- <div class="product-card">
       <img src="/images/moisturizing-mask.png" alt="улажняющая маска" class="product-card__image">
       <P class="product-card__for-skin">для нормальной кожи</P>
       <h3 class="product-card__title">Увлажняющая маска</h3>
@@ -105,12 +106,13 @@
         <span class="product-card__price-text"> Цена</span>
         <span class="product-card__price">7520 &#8381</span>
       </div>
-    </div>
+    </div> -->
   </div>
   <script src="/scriipt.js"> </script>
   <script src="/homework-5.js"> </script>
   <script src="/homework-6.js"> </script>
   <script src="/homework-7.js" type="module"> </script>
+  <script src="/homework-8.js" type="module"> </script>
 </body>
 
 </html>

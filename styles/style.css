@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-.product-card-container {
+#products-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,6 +13,8 @@
   height: 1191px;
   margin: 0px auto;
   position: relative;
+  list-style: none;
+  padding: 0;
 }
 
 .product-card-container__title {
@@ -34,8 +36,8 @@
   width: 340px;
   height: 573px;
   border: 2px solid white;
-  background-color: #F7F7FA;
-  padding: 20px 20px 20px 20px
+  background-color: #f7f7fa;
+  padding: 20px 20px 20px 20px;
 }
 
 .product-card__image {
@@ -45,11 +47,12 @@
 
 .product-card__bg-dandelions {
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
   width: 790px;
   height: 697px;
-  left: 85px;
-  top: 0px;
-  background: url(bg.png);
 }
 
 .product-card__for-skin {
@@ -61,7 +64,7 @@
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #A5A3B9;
+  color: #a5a3b9;
 }
 
 .product-card__title {
@@ -136,6 +139,10 @@
   font-size: 20px;
   line-height: 24px;
   color: #515076;
+}
+
+.product-card__comp-list {
+  padding: 5px 0px 17px 17px;
 }
 
 .buttons {
