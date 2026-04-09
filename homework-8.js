@@ -16,12 +16,10 @@ function getCountFromUser() {
   const num = Number(answer);
 
   if (isNaN(num) || num < 1 || num > 5) {
-    console.log("Ошибка");
-    return 5;
-  } else {
-    console.log("ок");
-    return num;
+    alert("Ошибка!");
+    return getCountFromUser();
   }
+  return num;
 }
 
 function renderProducts(list) {
@@ -43,14 +41,14 @@ function renderProducts(list) {
       product.price;
 
     const ingredientsList = productClone.querySelector("ul");
-    const ingredientItem = ingredientsList.querySelector(".product-card__item");
+    ingredientsList.innerHTML = "";
 
     product.compound.forEach((ingredientText) => {
-      const newLi = ingredientItem.cloneNode(true);
+      const newLi = document.createElement("li");
       newLi.textContent = ingredientText;
+      newLi.classList.add("product-card__item");
       ingredientsList.appendChild(newLi);
     });
-    ingredientItem.remove();
     productsList.appendChild(productClone);
   });
 }
@@ -60,7 +58,10 @@ renderProducts(productsToDisplay);
 
 // Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
 const productsDescriptions = productCards.reduce((acc, product) => {
-  acc[product.title] = product.description;
+  acc.push({
+    title: product.title,
+    description: product.description,
+  });
   return acc;
-}, {});
+}, []);
 console.log(productsDescriptions);

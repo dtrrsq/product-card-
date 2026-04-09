@@ -110,6 +110,7 @@
   font-size: 13px;
   line-height: 18px;
   color: #515076;
+  list-style-type: circle;
 }
 
 .product-card__price-container {
