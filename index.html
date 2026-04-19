@@ -21,6 +21,7 @@
       <button id="recolor-all-cards-button">перекрасить все карточки</button>
       <button id="open-google-button">переход на страницу Google</button>
       <button id="color-toggler-button">переключатель цвета</button>
+      <button class="open-modal-btn">Регистрация</button>
     </div>
     <ul id="products-list"></ul>
     <template id="product-card-template">
@@ -39,11 +40,62 @@
       </li>
     </template>
   </div>
+  <footer class="footer_main_container">
+    <div class="footer_container">
+      <div class="footer_socials">
+        <h4 class="footer_main_title">Product Cards</h4>
+        <p class="footer_text">У нас самые лучшие продукты для кожи</p>
+        <div class="footer_socials_images">
+          <img class="footer_img_telegram" src="/images/telegram.png" alt="телеграм">
+          <img class="footer_img_VK" src="/images/vk.png" alt="вконтакте">
+        </div>
+      </div>
+      <div class="footer_center">
+        <h5 class="footer_title_center">Подпишись на наши акции: </h5>
+        <form class="footer_form">
+          <label class="footer_label">
+            <input id="footer_input" type="email" placeholder="Введи email.." name="email">
+          </label>
+          <button class="footer_button " type="submit"> Подписаться </button>
+        </form>
+      </div>
+      <div class="footer_container_links">
+        <h6 class="footer__title_right">Быстрые ссылки</h6>
+        <nav class="footer_nav">
+          <ul class="footer_items">
+            <li class="footer_link"><a href="#">Контакты</a></li>
+            <li class="footer_link"><a href="#">Магазин</a></li>
+            <li class="footer_link"><a href="#">Главная</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="footer_line"></div>
+      <a href="mailto:info@example.com" class="footer_email"> www.product-cards.com©all right reserve</a>
+    </div>
+  </footer>
+  <div class="overlay">
+    <div class="modal">
+      <button class="close-modal-btn">&times;</button>
+      <form id="registration-form">
+        <label> Имя <input type="text" placeholder="Веддите имя" name="Name" required></label>
+        <label> Фамилия <input type="text" placeholder="Веддите фамилию" name="Surname" required> </label>
+        <label> Дата рождения <input type="date" placeholder="Дата рождения" name="Дата рождения" required></label>
+        <label> Логин <input type="text" placeholder="Веддите логин" name="Login" required> </label>
+        <label> Пароль <input type="password" placeholder="Веддите пароль" name="Password" required> </label>
+        <label> Повтор пароля <input type="password" placeholder="Повторите пароль" name="ConfirmPassword" required>
+        </label>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
   <script src="/scriipt.js"> </script>
   <script src="/homework-5.js"> </script>
   <script src="/homework-6.js"> </script>
   <script src="/homework-7.js" type="module"> </script>
   <script src="/homework-8.js" type="module"> </script>
+  <script src="/homework-9.js"> </script>
 </body>
 
 </html>
