@@ -17,9 +17,22 @@ export class Robot {
   }
 }
 
-const curso = new Robot("Curso", 100);
 const optimusPrime = new Robot("OptimusPrime", 100);
 
 optimusPrime.showInfo();
 optimusPrime.takeDamage(70);
 console.log(optimusPrime.isAlive());
+
+class WarRobot extends Robot {
+  constructor(name, battery, combatPower) {
+    super(name, battery);
+    this.combatPower = combatPower;
+  }
+  hasPower() {
+    console.log(`${this.name} получил ${this.combatPower} единиц силы`);
+  }
+}
+
+const megaTron = new WarRobot("Megatron", 100, 777);
+
+megaTron.hasPower();

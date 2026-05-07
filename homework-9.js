@@ -1,9 +1,19 @@
-// 1. добавить логику:email должен соответствовать стандартам
-const footer_form = document.querySelector(".footer_form");
-footer_form.addEventListener("submit", (event) => {
+import { Form } from "./forms.js";
+
+const footerSubscription = new Form("footer-subscription");
+
+footerSubscription.form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  console.log(data);
+
+  if (!footerSubscription.isValid()) {
+    alert("Введите корректный email!");
+    return;
+  }
+
+  const data = footerSubscription.getValues();
+
+  console.log("Данные подписки собраны через класс Form:", data);
+
+  footerSubscription.reset();
+  alert("Спасибо за подписку!");
 });
