@@ -1,5 +1,3 @@
-import { WarRobot } from "./WarRobot.js";
-
 export class Robot {
   constructor(name, battery) {
     this.name = name;
