@@ -5,12 +5,21 @@ async function init() {
   if (localData === null) {
     document.getElementById("status-message").textContent =
       "Данные загружаются";
-    await delay(2000);
-    const response = await fetch("async.json");
-    const data = await response.json();
-    localStorage.setItem("users", JSON.stringify(data.users));
-    document.getElementById("status-message").textContent = "";
-    renderCards(data.users);
+    try {
+      await delay(2000);
+      const response = await fetch("async.json");
+      if (!response.ok) {
+        throw new Error("Не удалось загрузить файл");
+      }
+      const data = await response.json();
+      localStorage.setItem("users", JSON.stringify(data.users));
+      document.getElementById("status-message").textContent = "";
+      renderCards(data.users);
+    } catch (error) {
+      console.error(error);
+      document.getElementById("status-message").textContent =
+        "Ошибка при загрузке данных";
+    }
   } else {
     console.log("Данные уже есть в памяти");
     const users = JSON.parse(localData);
@@ -52,7 +61,7 @@ function renderCards(users) {
 
 const deleteBtn = document.querySelector("#delete-all-btn");
 deleteBtn.addEventListener("click", () => {
-  localStorage.clear();
+  localStorage.removeItem("users");
   renderCards([]);
 });
 
