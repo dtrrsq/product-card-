@@ -47,7 +47,3 @@ colorTogglerButton.addEventListener('click', () => {
 
 
 
-
-
-
-
